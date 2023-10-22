@@ -1,0 +1,19 @@
+.sidebar {
+    background-color:  #fff;
+    position: absolute;
+    right: 50px;
+    width: 40%;
+    .item{
+        height: 80px;
+        .title{
+            /* width: 50%; */
+            overflow: hidden;
+        }
+        .img-item{
+            height: 40px;
+            width: 40px;
+            object-fit: cover;
+           
+        }
+    }
+}

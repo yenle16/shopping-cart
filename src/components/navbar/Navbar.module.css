@@ -1,0 +1,9 @@
+.navbar{
+    position: fixed;
+    background-color: white;
+    top:0;
+    width: 100vw;
+    .active{
+        color: rgb(50, 50, 239);
+      }
+}
