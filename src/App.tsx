@@ -6,13 +6,14 @@ import { Home } from './pages/home/Home';
 import { Navbar } from './components/navbar/Navbar';
 import { Store } from './pages/store/Store';
 import { CartProvider } from './context/CartContext';
-import { Login } from './pages/login/Login';
 import { publicRoutes } from './routes/ListRoute';
+// import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
     <div className="App">
       <CartProvider>
+        {/* <AuthProvider> */}
         <Routes>
           {publicRoutes.map((route, index) => {
             const Component = route.component;
@@ -30,6 +31,7 @@ function App() {
             );
           })}
         </Routes>
+        {/* </AuthProvider> */}
       </CartProvider>
     </div>
   );

@@ -1,7 +1,7 @@
 import MainLayout from '../components/layout/MainLayout';
 import NoHeaderLayout from '../components/layout/NoHeaderLayout';
 import { Home } from '../pages/home/Home';
-import { Login } from '../pages/login/Login';
+import Login from '../pages/login/Login';
 import { Store } from '../pages/store/Store';
 
 const publicRoutes = [
