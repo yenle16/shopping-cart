@@ -41,7 +41,7 @@ export default function Login() {
       })
       .then((response) => {
         console.log('login', response);
-        navigate('/');
+        navigate('/admin/dashboard');
         setisLogin(true);
       })
       .catch((error) => {

@@ -1,8 +1,8 @@
 import React from 'react';
 import { useCart } from '../../context/CartContext';
-import styles from './SideBar.module.css';
+import styles from './CartSidebar.module.css';
 
-function Sidebar() {
+function CartSidebar() {
   const { state } = useCart();
 
   return (
@@ -25,4 +25,4 @@ function Sidebar() {
   );
 }
 
-export default Sidebar;
+export default CartSidebar;
