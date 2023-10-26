@@ -10,20 +10,18 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-// import { CheckLogin } from '../../action/auth';
-// import { useContext } from 'react';
-// import { AuthContext } from '../../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
+import { useAuth } from '../../context/AuthContext';
 
 const defaultTheme = createTheme();
 
 export default function Login() {
   // const { authenticated, setAuthenticated } = useContext(AuthContext);
   const navigate = useNavigate();
-
-  const [isLogin, setisLogin] = useState(false);
+  const { dispatch } = useAuth();
+  const [isLogin, setIsLogin] = useState(false);
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -41,8 +39,9 @@ export default function Login() {
       })
       .then((response) => {
         console.log('login', response);
+        dispatch({ type: 'LOGIN', userToken: response.data.token });
         navigate('/admin/dashboard');
-        setisLogin(true);
+        setIsLogin(true);
       })
       .catch((error) => {
         alert('wrong info');
@@ -50,7 +49,6 @@ export default function Login() {
         // console.log(error)
       });
   };
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">

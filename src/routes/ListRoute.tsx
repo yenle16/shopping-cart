@@ -28,6 +28,8 @@ const publicRoutes = [
     component: Login,
     layout: NoHeaderLayout,
   },
+];
+const protectedRoutes = [
   {
     path: '/admin/dashboard',
     component: AdminDashBoard,
@@ -44,5 +46,4 @@ const publicRoutes = [
     layout: NoHeaderLayout,
   },
 ];
-
-export { publicRoutes };
+export { publicRoutes, protectedRoutes };
