@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAllUsers } from '../../../data/api';
 import AdminSidebar from '../../../components/admin-sidebar/AdminSidebar';
-import { UserCard } from '../../../components/user-card/UserCard';
+import UserTable from '../../../components/user-table/UserTable';
 export type UserProps = {
   id: number;
   email: string;
@@ -42,13 +42,14 @@ export function AdminManageUser() {
       <div className={`flex-auto mt-20`}>
         <div className="mx-20">
           <h1>User</h1>
-          <div className="flex flex-col">
+          {/* <div className="flex flex-col">
             {users.map((user) => (
               <div key={user.id} className="py-10 px-2">
                 <UserCard {...user} />
               </div>
             ))}
-          </div>
+          </div> */}
+          <UserTable rows={users} />
         </div>
       </div>
     </div>
