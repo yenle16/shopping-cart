@@ -1,12 +1,11 @@
 import MainLayout from '../components/layout/MainLayout';
 import NoHeaderLayout from '../components/layout/NoHeaderLayout';
 import AdminDashBoard from '../pages/admin/admin-dashboard/AdminDashboard';
-import AdminManageProduct from '../pages/admin/admin-manage-product/AdminManageProduct';
 import { AdminManageUser } from '../pages/admin/admin-manage-user/AdminManageUser';
-import DataTable from '../components/user-table/UserTable';
 import { Home } from '../pages/home/Home';
 import Login from '../pages/login/Login';
 import { Store } from '../pages/store/Store';
+import AdminManageProduct from '../pages/admin/admin-manage-product/AdminManageProduct';
 
 const publicRoutes = [
   {

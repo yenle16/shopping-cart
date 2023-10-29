@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAllUsers } from '../../../data/api';
-import AdminSidebar from '../../../components/admin-sidebar/AdminSidebar';
-import UserTable from '../../../components/user-table/UserTable';
+import AdminSidebar from '../../../components/admin_sidebar/AdminSidebar';
+import UserTable from '../../../components/user_table/UserTable';
 export type UserProps = {
   id: number;
   email: string;

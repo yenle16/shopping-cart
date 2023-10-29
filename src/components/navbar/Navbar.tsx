@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { IcCartShopping } from '../icons/IcCartShopping';
 import { Cart } from '../cart/Cart';
 import { useState } from 'react';
-import Sidebar from '../cart-sidebar/CartSideBar';
+import Sidebar from '../cart_sidebar/CartSideBar';
 import styles from './Navbar.module.css';
 export function Navbar() {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);

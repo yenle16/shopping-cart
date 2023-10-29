@@ -1,5 +1,5 @@
 import * as React from 'react';
-import AdminSidebar from '../../../components/admin-sidebar/AdminSidebar';
+import AdminSidebar from '../../../components/admin_sidebar/AdminSidebar';
 import { useState } from 'react';
 
 export default function AdminDashBoard() {

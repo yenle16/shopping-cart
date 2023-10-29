@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { StoreItem } from '../../components/store-item/StoreItem';
+import { StoreItem } from '../../components/store_item/StoreItem';
 import { getItems } from '../../data/api';
 import styles from './Store.module.css';
 export function Store() {
