@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -48,7 +48,11 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       document.querySelector('body')?.classList.remove('sidebar-expanded');
     }
   }, [sidebarExpanded]);
-
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    localStorage.removeItem('userToken');
+    navigate('/admin/login', { replace: true });
+  };
   const [isOpen, setIsOpen] = useState(true);
   return (
     <aside
@@ -91,6 +95,16 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 >
                   Manage Invoices
                 </NavLink>
+              </li>
+            </ul>
+            <ul className="mb-6 flex flex-col gap-1.5">
+              <li>
+                <button
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-slate-50 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4`}
+                  onClick={handleLogOut}
+                >
+                  Log Out
+                </button>
               </li>
             </ul>
           </div>

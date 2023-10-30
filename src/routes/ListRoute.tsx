@@ -6,6 +6,7 @@ import { Home } from '../pages/home/Home';
 import Login from '../pages/login/Login';
 import { Store } from '../pages/store/Store';
 import AdminManageProduct from '../pages/admin/admin-manage-product/AdminManageProduct';
+import { AdminManageAccount } from '../pages/admin/admin-Account/AdminManageAccount';
 
 const publicRoutes = [
   {
@@ -26,6 +27,11 @@ const publicRoutes = [
   {
     path: 'admin/login',
     component: Login,
+    layout: NoHeaderLayout,
+  },
+  {
+    path: 'user',
+    component: AdminManageAccount,
     layout: NoHeaderLayout,
   },
 ];

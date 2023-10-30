@@ -19,6 +19,7 @@ const defaultTheme = createTheme();
 
 export default function Login() {
   // const { authenticated, setAuthenticated } = useContext(AuthContext);
+  // localStorage.setItem('userToken', null);
   const navigate = useNavigate();
   const { dispatch } = useAuth();
   const [isLogin, setIsLogin] = useState(false);
@@ -40,6 +41,7 @@ export default function Login() {
       .then((response) => {
         console.log('login', response);
         dispatch({ type: 'LOGIN', userToken: response.data.token });
+        localStorage.setItem('userToken', response.data.token);
         navigate('/admin/dashboard');
         setIsLogin(true);
       })
