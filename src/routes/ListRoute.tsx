@@ -29,11 +29,6 @@ const publicRoutes = [
     component: Login,
     layout: NoHeaderLayout,
   },
-  {
-    path: 'user',
-    component: AdminManageAccount,
-    layout: NoHeaderLayout,
-  },
 ];
 const protectedRoutes = [
   {

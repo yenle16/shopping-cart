@@ -34,7 +34,6 @@ type DataTableProps = {
 };
 
 const UserTable: React.FC<DataTableProps> = ({ rows }) => {
-  console.log('a', typeof rows);
   return (
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid
