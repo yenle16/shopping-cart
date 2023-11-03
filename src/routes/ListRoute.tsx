@@ -32,6 +32,11 @@ const publicRoutes = [
 ];
 const protectedRoutes = [
   {
+    path: '/admin',
+    component: AdminDashBoard,
+    layout: NoHeaderLayout,
+  },
+  {
     path: '/admin/dashboard',
     component: AdminDashBoard,
     layout: NoHeaderLayout,
